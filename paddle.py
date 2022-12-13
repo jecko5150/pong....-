@@ -1,7 +1,7 @@
 from turtle import Turtle
 
-STARTING_POSITIONS = [(350, 0), (-350, 0)]
-
+STARTING_POSITIONS = [(360, 0), (-360, 0)]
+MOVE_DISTANCE = 25
 UP = 90
 DOWN = 270
 
@@ -26,3 +26,19 @@ class Paddle:
         new_paddle.shapesize(stretch_wid=2, stretch_len=10)
         new_paddle.goto(position)
         self.segments.append(new_paddle)
+
+    def move_up(self):
+        if self.right.ycor() != 200:
+            self.right.forward(MOVE_DISTANCE)
+
+    def move_down(self):
+        if self.right.ycor() != -200:
+            self.right.bk(MOVE_DISTANCE)
+
+    def move_up_l(self):
+        if self.left.ycor() != 200:
+            self.left.forward(MOVE_DISTANCE)
+
+    def move_down_l(self):
+        if self.left.ycor() != -200:
+            self.left.bk(MOVE_DISTANCE)
