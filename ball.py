@@ -11,8 +11,8 @@ class Ball(Turtle):
         self.shapesize(stretch_len=1, stretch_wid=1)
         self.color("white")
         self.setpos(0, 0)
-        self.x_move = random.randint(5, 10)
-        self.y_move = random.randint(5, 10)
+        self.x_move = 10        
+        self.y_move = 10    
         self.move_speed = .1
 
     def move(self):
